@@ -1,50 +1,48 @@
-String [] sixDie = {"1","2","3","4","5","6"}; 
-  //int Steve=0;
-void setup() {
-  //size of the window
-  size(1000,700);
-  //background color teal
-  background(#008080);
-  //fill the text white
-  fill(#ffffff);
-  //the font size is 20
-  textSize(20);
-  //Directions on screen
-  text("Left Click To Roll One Die", 50,50);
-  text("Right Click To Roll Multiple Dice", 50,100);
-}
-//allows a loop so mouseclicked can work
-void draw() {
-  
-}
-void mouseClicked() {
-  //background color teal also makes sure the numbers dont overlap
-  background(#008080);
-  //text color white
-  fill(#ffffff);
-  //text size 20 font
-  textSize(20);
-  //more directions
-  text("Left Click To Roll One Die", 50,50);
-  text("Right Click To Roll Multiple Dice", 50,100);
-  //if the mouse button is left clicked creates a random number from 1-6
-  if(mouseButton == LEFT) {
-    fill(90);
-    rect(473,275,100,100);
+  String [] eightBall = {"It is certain","S","Without a doubt","Yes","You may rely on it","As I see it, yes","Most likely","Outlook good", "Signs point to yes", "Reply hazy, try again","Ask again later","Nah","Cannot predict now","Don't count on it","Retry","My reply is no","My sources say no", "Outlook no good", "Very doubtful","Stop relying on me for your bad decisions"}; 
+    //int Steve=0;
+  void setup() {
+    //size of the window
+    size(1000,700);
+    //background color teal
+    background(#008080);
+    //fill the text white
+    fill(#ffffff);
+    //the font size is 20
+    textSize(20);
+    //Directions on screen
+    text("Left Click For Fortune", 50,50);
+    fill(0);
+    circle(width/2, height/2, 500);
+    fill(255);
+    circle(width/2, height/2, 225);
+    fill(0);
+    textSize(100);
+    text("8", 468, 385);
+    
+  }
+  //allows a loop so mouseclicked can work
+  void draw() {
+    
+  }
+  void mouseClicked() {
+    //background color teal also makes sure the numbers dont overlap
+    background(#008080);
+    //text color white
+    fill(#ffffff);
+    //text size 20 font
+    textSize(20);
+    //more directions
+    text("Left Click For Fortune ", 50,50);
+    //if the mouse button is left clicked creates a random number from 1-6
+    if(mouseButton == LEFT) {
+    fill(0);
+    circle(width/2, height/2, 500);
+    fill(255);
+    circle(width/2, height/2, 225);
     fill(#ff0000);
-    textSize(75);
-    text(sixDie[(int(random(6)))], width/2, height/2);
-  } 
-  //if right clicked creates multiple dice from 1-6
-    else if(mouseButton == RIGHT) {
-      fill(90);
-      rect(305,390,100,100);
-      rect(640,390,100,100);
-      rect(473,200,100,100);
-      fill(#ff0000);
-      textSize(75);
-      text(sixDie[(int(random(6)))], width/1.5, height/1.5);
-      text(sixDie[(int(random(6)))], width/3, height/1.5);
-      text(sixDie[(int(random(6)))], width/2, height/2.5);
-}
-}
+    triangle(500, 238, 600, 400, 400, 400);
+    fill(0);
+    textSize(13);
+      text(eightBall[(int(random(20)))], 450, 350);
+    } 
+  }
